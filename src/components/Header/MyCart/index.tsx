@@ -5,14 +5,14 @@ import { Typography, Box, IconButton } from '@mui/material'
 export const MyCart = () => {
     const { productList, changePage } = useCart()
     return (
-        <Box sx={{display: 'flex'}}>
+        <Box sx={{display: 'flex', alignItems: 'center'}}>
             <Box mr={'10px'}>
-                <Box>
+                <Box sx={{ display: {xs: 'none', md: 'flex'}}}>
                     <Typography color={'#FFFFFF'} fontWeight={600} fontSize={14} lineHeight={'19px'}>
                         Meu Carrinho
                     </Typography>
                 </Box>
-                <Box sx={{display: 'flex', justifyContent: 'flex-end'}}>
+                <Box sx={{display: 'flex', justifyContent: 'flex-end' }}>
                     <Typography color={'#999999'} fontWeight={600} fontSize={12} lineHeight={'16px'}>
                         {productList.length} Items
                     </Typography>
