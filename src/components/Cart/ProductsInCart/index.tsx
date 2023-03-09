@@ -19,7 +19,7 @@ export const ProductsInCart: React.FC<ProductsInCartTypes> = ({ list }) => {
     }, [list])
 
     return (
-        <Box flex={1} maxWidth='960px' bgcolor='#FFFFFF' justifyContent={'center'} alignItems='center' p='24px' borderRadius={'4px'}>
+        <Box flex={1} bgcolor='#FFFFFF' justifyContent={'center'} alignItems='center' p='24px' borderRadius={'4px'}>
             <Grid container spacing={2} mb='21px'>
                 <Grid item xs={6}>
                     <Typography color={'#999999'} fontWeight={700} fontSize={14} lineHeight={'19px'}>PRODUTO</Typography>

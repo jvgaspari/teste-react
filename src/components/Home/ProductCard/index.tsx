@@ -10,7 +10,7 @@ export const ProductCard: React.FC<ProductCardTypes> = ({ id, image, price, titl
     const index = productList.findIndex(val => val.id == id);
 
     return (
-        <Box width={310} height={305} bgcolor={'#FFFFFF'} p={"10px"} alignItems={'center'} borderRadius='4px'>
+        <Box height={305} bgcolor={'#FFFFFF'} p={"10px"} alignItems={'center'} borderRadius='4px'>
             <Box display={'flex'} justifyContent='center' alignItems='center'>
                 <Image width={147} height={188} src={image} alt={title}/>
             </Box>

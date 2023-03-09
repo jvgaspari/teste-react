@@ -11,7 +11,7 @@ const EmptyCart: React.FC = () => {
   }
 
   return (
-    <Box flex={1} maxWidth='960px' bgcolor='#FFFFFF' justifyContent={'center'} alignItems='center'>
+    <Box flex={1} bgcolor='#FFFFFF' justifyContent={'center'} alignItems='center'>
         <Box display={'flex'} justifyContent='center' alignItems={'center'} pt='64px' mb='32px'>
           <Typography
             color={'#2F2E41'} fontWeight={700} fontSize={20} lineHeight={'27px'}
