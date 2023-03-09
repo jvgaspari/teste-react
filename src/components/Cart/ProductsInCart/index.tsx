@@ -117,7 +117,30 @@ export const ProductsInCart: React.FC<ProductsInCartTypes> = ({ list }) => {
                     </>
                 ))
             }
-            <Box mt='21px' pt='21px' borderTop={'1px solid #999999'} display={'flex'} flex={1} justifyContent={'space-between'} alignItems='center'>
+            <Box mt='21px' pt='25px' pb='16px' borderTop={'1px solid #999999'} sx={{display: {sx: 'flex', md: 'none'}}} flex={1} flexDirection={'column'} justifyContent={'space-between'} alignItems='center'>
+                <Box display={'flex'} justifyContent={'flex-end'} alignItems='center'>
+                    <Box display={'flex'} justifyContent={'flex-end'} alignItems='center'>
+                        <Typography mr={'5px'} color={'#999999'} fontWeight={700} fontSize={14} lineHeight={'19px'}>TOTAL</Typography>
+                        <Typography px='10px' color={'#2F2E41'} fontWeight={700} fontSize={24} lineHeight={'33px'}>
+                            {
+                                Mask('MoneyMask', String(cartAmount.toFixed(2)))
+                            }
+                        </Typography>
+                    </Box>
+                </Box>
+                <Button onClick={() => {
+                    resetProductList()
+                    changePage('checkout')
+                }}
+                    sx={{width: '100%', height: '40px', mt: '16px', borderRadius: '4px', background: '#009EDD', ':hover': {
+                        bgcolor: '#009EDD',
+                        opacity: 0.7
+                    }}}
+                >
+                    <Typography color={'#FFFFFF'} fontWeight={700} fontSize={14} lineHeight={'19px'}>FINALIZAR PEDIDO</Typography>
+                </Button>
+            </Box>
+            <Box mt='21px' pt='21px' borderTop={'1px solid #999999'} sx={{ display: {xs: 'none', md: 'flex'}}} flex={1} justifyContent={'space-between'} alignItems='center'>
                 <Button onClick={() => {
                     resetProductList()
                     changePage('checkout')
