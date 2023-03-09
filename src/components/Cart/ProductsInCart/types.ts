@@ -1,5 +1,5 @@
-import { IProduct } from "@/contexts/types"
+import { IProduct } from '@/contexts/types';
 
 export interface ProductsInCartTypes {
-    list: IProduct[]
+  list: IProduct[];
 }

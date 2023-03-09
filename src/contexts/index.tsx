@@ -4,12 +4,12 @@ import { CartProviderProps, ICartContext, IProduct } from './types';
 const CartContext = createContext<ICartContext>({} as ICartContext);
 
 const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
-  const [productList, setProductList] = useState<IProduct[]>([])
-  const [contentPage, setContentPage] = useState<string>('')
+  const [productList, setProductList] = useState<IProduct[]>([]);
+  const [contentPage, setContentPage] = useState<string>('');
 
   const addProductToCart = (cart: IProduct) => {
-    setProductList(prevState => [...prevState, cart])
-  }
+    setProductList((prevState) => [...prevState, cart]);
+  };
 
   const removeProductFromCart = (productId: number) => {
     setProductList((current) =>
@@ -18,9 +18,9 @@ const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
   };
 
   const incrementQuantity = (productId: number) => {
-    const newState = productList.map(product => {
+    const newState = productList.map((product) => {
       if (product.id === productId) {
-        return {...product, quantity: product.quantity + 1};
+        return { ...product, quantity: product.quantity + 1 };
       }
       return product;
     });
@@ -28,9 +28,9 @@ const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
   };
 
   const decreaseQuantity = (productId: number) => {
-    const newState = productList.map(product => {
+    const newState = productList.map((product) => {
       if (product.id === productId) {
-        return {...product, quantity: product.quantity - 1};
+        return { ...product, quantity: product.quantity - 1 };
       }
       return product;
     });
@@ -38,23 +38,29 @@ const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
   };
 
   const resetProductList = () => {
-    setProductList([])
-  }
+    setProductList([]);
+  };
 
   const changePage = (page: string) => {
-    setContentPage(page)
-  }
+    setContentPage(page);
+  };
 
-  const value = React.useMemo(() => ({
-    productList, addProductToCart, removeProductFromCart, incrementQuantity, decreaseQuantity, contentPage, changePage, resetProductList
-  }), [productList, contentPage, changePage, resetProductList]);
-
-  return (
-    <CartContext.Provider value={value}>
-      {children}
-    </CartContext.Provider>
+  const value = React.useMemo(
+    () => ({
+      productList,
+      addProductToCart,
+      removeProductFromCart,
+      incrementQuantity,
+      decreaseQuantity,
+      contentPage,
+      changePage,
+      resetProductList,
+    }),
+    [productList, contentPage, changePage, resetProductList]
   );
-}
+
+  return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
+};
 
 function useCart() {
   const context = useContext(CartContext);

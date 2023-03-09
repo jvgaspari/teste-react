@@ -1,5 +1,5 @@
-import { Products } from "@/pages/api/products";
+import { Products } from '@/pages/api/products';
 
 export interface ProductListTypes {
-    products: Products[]
+  products: Products[];
 }

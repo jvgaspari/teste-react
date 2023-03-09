@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export const AddProductIcon = (props: any) => {
   return (
@@ -16,4 +16,4 @@ export const AddProductIcon = (props: any) => {
       ></path>
     </svg>
   );
-}
+};

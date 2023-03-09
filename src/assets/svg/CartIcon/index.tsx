@@ -1,4 +1,4 @@
-import * as React from "react"
+import * as React from 'react';
 
 const CartIcon = (props: any) => (
   <svg
@@ -13,6 +13,6 @@ const CartIcon = (props: any) => (
       fill="#fff"
     />
   </svg>
-)
+);
 
-export default CartIcon
+export default CartIcon;

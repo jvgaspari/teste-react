@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const Decrease = (props: any) => {
   return (
@@ -16,6 +16,6 @@ const Decrease = (props: any) => {
       ></path>
     </svg>
   );
-}
+};
 
 export default Decrease;
