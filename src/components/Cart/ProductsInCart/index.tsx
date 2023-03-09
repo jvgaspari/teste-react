@@ -117,7 +117,7 @@ export const ProductsInCart: React.FC<ProductsInCartTypes> = ({ list }) => {
                     </>
                 ))
             }
-            <Box mt='21px' pt='25px' pb='16px' borderTop={'1px solid #999999'} sx={{display: {sx: 'flex', md: 'none'}}} flex={1} flexDirection={'column'} justifyContent={'space-between'} alignItems='center'>
+            <Box mt='21px' pt='21px' pb='16px' borderTop={'1px solid #999999'} sx={{display: {sx: 'flex', md: 'none'}}} flex={1} flexDirection={'column'} justifyContent={'space-between'} alignItems='center'>
                 <Box display={'flex'} justifyContent={'flex-end'} alignItems='center'>
                     <Box display={'flex'} justifyContent={'flex-end'} alignItems='center'>
                         <Typography mr={'5px'} color={'#999999'} fontWeight={700} fontSize={14} lineHeight={'19px'}>TOTAL</Typography>
